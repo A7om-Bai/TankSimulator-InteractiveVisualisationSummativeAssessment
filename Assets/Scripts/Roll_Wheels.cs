@@ -5,7 +5,7 @@ using UnityEngine;
 public class Roll_Wheels : MonoBehaviour {
 
 	public UnitMovements unitMovements;
-	public float speedMultiplier = 5f;
+	public float speedMultiplier = 10f;
 	
 	void Update () 
 	{
