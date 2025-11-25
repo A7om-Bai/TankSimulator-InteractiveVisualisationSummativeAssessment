@@ -303,6 +303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.05
+  rotationScrollFactor: 0.05
+  movementThreshold: 0.01
+  rotationThreshold: 0.1
 --- !u!1 &1354986992497721123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.05
+  rotationScrollFactor: 0.05
+  movementThreshold: 0.01
+  rotationThreshold: 0.1
 --- !u!1 &8756296281123531151
 GameObject:
   m_ObjectHideFlags: 0

@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitMovements: {fileID: -7999196297501153055}
-  speedMultiplier: 6
+  speedMultiplier: 4
 --- !u!1 &2324309693057342685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.05
+  rotationScrollFactor: 0.05
+  movementThreshold: 0.001
+  rotationThreshold: 0.01
 --- !u!1 &6630179043276491973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1778,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.05
+  rotationScrollFactor: 0.05
+  movementThreshold: 0.001
+  rotationThreshold: 0.01
 --- !u!1 &7611877491239967893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitMovements: {fileID: -7999196297501153055}
-  speedMultiplier: 6
+  speedMultiplier: 4
 --- !u!1 &8823619846643822493
 GameObject:
   m_ObjectHideFlags: 0

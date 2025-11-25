@@ -1508,6 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.02
+  rotationScrollFactor: 0.02
 --- !u!1 &5338268876442386193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,3 +2888,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollFactor: 0.02
+  rotationScrollFactor: 0.02
