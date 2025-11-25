@@ -97,16 +97,29 @@ public class UnitMovements : MonoBehaviour
         Quaternion targetRot = Quaternion.LookRotation(desiredDir);
         float angle = Quaternion.Angle(transform.rotation, targetRot);
 
-        if (angle > 0.1f)
+        // 判断目标点是否为远距离
+        bool isFarTarget = toTarget.magnitude > avoidanceCheckDistance;
+
+        if (angle > turnThreshold && !isFarTarget)
+        {
+            // 如果是近距离目标点且在转角范围内，先旋转坦克
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
+            currentSpeed = 0f; // 停止移动，直到旋转完成
+        }
+        else
+        {
+            // 远距离目标点或普通情况，边旋转边移动
+            if (angle > 0.1f)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
 
-        float targetSpeed = maxSpeed;
-        if (isAvoiding)
-            targetSpeed *= avoidanceSlowdown;
+            float targetSpeed = maxSpeed;
+            if (isAvoiding)
+                targetSpeed *= avoidanceSlowdown;
 
-        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
-        transform.position += transform.forward * currentSpeed * Time.deltaTime;
-        agent.nextPosition = transform.position;
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
+            transform.position += transform.forward * currentSpeed * Time.deltaTime;
+            agent.nextPosition = transform.position;
+        }
     }
 
     private Vector3 ApplyAvoidance(Vector3 desiredDir)
