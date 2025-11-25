@@ -11,10 +11,17 @@ public class InMoving_TurretOffset : MonoBehaviour
     [SerializeField]
     private float offsetSpeed = 3f;
 
+    [SerializeField]
+    private float idleSwayAmplitude = 2f; // Amplitude of the sway when idle
+
+    [SerializeField]
+    private float idleSwayFrequency = 1f; // Frequency of the sway when idle
+
     private float lastTankYAngle;
     private Vector3 lastTankPosition;
     private float currentOffsetAngle = 0f;
     private bool offsetDirection = true;
+    private float idleSwayTimer = 0f; // Timer for idle sway
 
     void Start()
     {
@@ -43,14 +50,20 @@ public class InMoving_TurretOffset : MonoBehaviour
         float tankSpeed = (tankBody.position - lastTankPosition).magnitude / Time.deltaTime;
         if (tankSpeed > 0.1f)
         {
+            // Moving state: sway based on direction
             float swayDelta = offsetSpeed * Time.deltaTime * (offsetDirection ? 1f : -1f);
             currentOffsetAngle += swayDelta;
             if (currentOffsetAngle >= maxOffsetAngle) offsetDirection = false;
             if (currentOffsetAngle <= -maxOffsetAngle) offsetDirection = true;
+
+            idleSwayTimer = 0f; // Reset idle sway timer when moving
         }
         else
         {
-            currentOffsetAngle = Mathf.Lerp(currentOffsetAngle, 0f, offsetSpeed * Time.deltaTime);
+            // Idle state: apply small sway using sine wave
+            idleSwayTimer += Time.deltaTime * idleSwayFrequency;
+            float idleSway = Mathf.Sin(idleSwayTimer) * idleSwayAmplitude;
+            currentOffsetAngle = Mathf.Lerp(currentOffsetAngle, idleSway, offsetSpeed * Time.deltaTime);
         }
 
         transform.localRotation = Quaternion.Euler(0f, currentOffsetAngle, 0f);
