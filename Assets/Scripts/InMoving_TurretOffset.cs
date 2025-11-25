@@ -6,10 +6,10 @@ public class InMoving_TurretOffset : MonoBehaviour
     private Transform tankBody;
 
     [SerializeField]
-    private float maxOffsetAngle = 30f;
+    private float maxOffsetAngle = 20f;
 
     [SerializeField]
-    private float offsetSpeed = 3f;
+    private float offsetSpeed = 4f;
 
     [SerializeField]
     private float idleSwayAmplitude = 2f; // Amplitude of the sway when idle
@@ -40,34 +40,47 @@ public class InMoving_TurretOffset : MonoBehaviour
     {
         if (tankBody == null) return;
 
+        // Get the current rotation and position of the tank body
         float currentYAngle = tankBody.eulerAngles.y;
         float angleDelta = Mathf.DeltaAngle(lastTankYAngle, currentYAngle);
 
-        currentOffsetAngle += -angleDelta;
+        // Calculate the target offset angle based on the tank's rotation
+        float targetOffsetAngle = currentOffsetAngle - angleDelta;
+        targetOffsetAngle = Mathf.Clamp(targetOffsetAngle, -maxOffsetAngle, maxOffsetAngle);
 
-        currentOffsetAngle = Mathf.Clamp(currentOffsetAngle, -maxOffsetAngle, maxOffsetAngle);
-
+        // Calculate the tank's movement speed
         float tankSpeed = (tankBody.position - lastTankPosition).magnitude / Time.deltaTime;
+
         if (tankSpeed > 0.1f)
         {
             // Moving state: sway based on direction
             float swayDelta = offsetSpeed * Time.deltaTime * (offsetDirection ? 1f : -1f);
-            currentOffsetAngle += swayDelta;
-            if (currentOffsetAngle >= maxOffsetAngle) offsetDirection = false;
-            if (currentOffsetAngle <= -maxOffsetAngle) offsetDirection = true;
+            targetOffsetAngle += swayDelta;
 
-            idleSwayTimer = 0f; // Reset idle sway timer when moving
+            // Reverse sway direction if the offset angle exceeds the maximum
+            if (targetOffsetAngle >= maxOffsetAngle) offsetDirection = false;
+            if (targetOffsetAngle <= -maxOffsetAngle) offsetDirection = true;
+
+            // Reset idle sway timer when moving
+            idleSwayTimer = 0f;
         }
         else
         {
             // Idle state: apply small sway using sine wave
             idleSwayTimer += Time.deltaTime * idleSwayFrequency;
             float idleSway = Mathf.Sin(idleSwayTimer) * idleSwayAmplitude;
-            currentOffsetAngle = Mathf.Lerp(currentOffsetAngle, idleSway, offsetSpeed * Time.deltaTime);
+
+            // Gradually reduce the target offset angle towards the idle sway
+            targetOffsetAngle = Mathf.Lerp(currentOffsetAngle, idleSway, Time.deltaTime * (offsetSpeed * 0.5f));
         }
 
+        // Smoothly transition to the target offset angle
+        currentOffsetAngle = Mathf.Lerp(currentOffsetAngle, targetOffsetAngle, Time.deltaTime * offsetSpeed);
+
+        // Apply the rotation to the turret
         transform.localRotation = Quaternion.Euler(0f, currentOffsetAngle, 0f);
 
+        // Update the last known tank state
         lastTankYAngle = currentYAngle;
         lastTankPosition = tankBody.position;
     }

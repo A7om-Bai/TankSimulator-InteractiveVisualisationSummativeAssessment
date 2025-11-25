@@ -2529,7 +2529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankBody: {fileID: 3059371111557938081}
   maxOffsetAngle: 30
-  offsetSpeed: 5
+  offsetSpeed: 20
+  idleSwayAmplitude: 8
+  idleSwayFrequency: 1
 --- !u!1 &8457023837080930425
 GameObject:
   m_ObjectHideFlags: 0
