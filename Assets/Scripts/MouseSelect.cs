@@ -45,6 +45,10 @@ public class MouseSelect : MonoBehaviour
                 if (unitMovements != null)
                 {
                     unitMovements.MoveToPoint(hit.point);
+
+                    TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
+                    if (drawer != null)
+                        drawer.SetDestination(hit.point);
                 }
             }
         }
