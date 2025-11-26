@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 
 public class MouseSelect : MonoBehaviour
 {
@@ -15,43 +16,65 @@ public class MouseSelect : MonoBehaviour
             {
                 RaycastHit hit = CastRay();
                 if (hit.collider == null || !hit.collider.CompareTag(selectableTag))
-                {
                     return;
-                }
+
                 selectedObject = hit.collider.gameObject;
+
                 Outline outline = selectedObject.GetComponent<Outline>();
                 if (outline != null)
-                {
                     outline.enabled = true;
-                }
-                else
-                {
-                    Debug.LogWarning("Selected object does not have an Outline component.");
-                }
+
+                TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
+                if (drawer != null)
+                    drawer.ShowLastPath();
             }
             else
             {
-                selectedObject.GetComponent<Outline>().enabled = false;
+                Outline outline = selectedObject.GetComponent<Outline>();
+                if (outline != null) outline.enabled = false;
+
+                TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
+                if (drawer != null) drawer.HidePath();
+
                 selectedObject = null;
             }
         }
 
+
         if (Input.GetMouseButtonDown(1) && selectedObject != null)
         {
-            RaycastHit hit = CastRay();
-            if (hit.collider != null)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
             {
-                UnitMovements unitMovements = selectedObject.GetComponent<UnitMovements>();
-                if (unitMovements != null)
+                NavMeshHit navHit;
+                if (NavMesh.SamplePosition(hit.point, out navHit, 2f, NavMesh.AllAreas))
                 {
-                    unitMovements.MoveToPoint(hit.point);
+                    Vector3 finalPos = navHit.position;
+
+                    UnitMovements unitMovements = selectedObject.GetComponent<UnitMovements>();
+                    if (unitMovements != null)
+                        unitMovements.MoveToPoint(finalPos);
 
                     TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
                     if (drawer != null)
-                        drawer.SetDestination(hit.point);
+                    {
+                        drawer.isPathVisible = true;
+                        drawer.SetDestination(finalPos);
+                    }
+
+                    return;
                 }
             }
+
+            TankPathDrawer hideDrawer = selectedObject.GetComponent<TankPathDrawer>();
+            if (hideDrawer != null)
+                hideDrawer.HidePath();
         }
+
+
+
     }
 
     private RaycastHit CastRay()

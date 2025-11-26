@@ -23,6 +23,9 @@ public class TankPathDrawer : MonoBehaviour
     private bool fadingOut = false;
     private float currentAlpha = 1f;
     private float lineLength = 0f;
+    public bool isPathVisible = true;
+    private NavMeshPath lastPath;
+
 
     private static readonly int MainTex = Shader.PropertyToID("_MainTex");
 
@@ -53,6 +56,7 @@ public class TankPathDrawer : MonoBehaviour
         }
 
         lineRenderer.enabled = false;
+        lastPath = new NavMeshPath();
     }
 
     void Update()
@@ -84,7 +88,9 @@ public class TankPathDrawer : MonoBehaviour
         hasDestination = true;
         fadingOut = false;
         currentAlpha = 1f;
+        isPathVisible = true;
         lineRenderer.enabled = true;
+
         UpdatePathLine();
     }
 
@@ -95,8 +101,13 @@ public class TankPathDrawer : MonoBehaviour
         NavMeshPath path = new NavMeshPath();
         if (agent.CalculatePath(destination, path) && path.corners.Length > 1)
         {
-            lineRenderer.positionCount = path.corners.Length;
-            lineRenderer.SetPositions(path.corners);
+            lastPath = path;
+
+            if (isPathVisible)
+            {
+                lineRenderer.positionCount = path.corners.Length;
+                lineRenderer.SetPositions(path.corners);
+            }
 
             lineLength = 0f;
             for (int i = 1; i < path.corners.Length; i++)
@@ -111,6 +122,7 @@ public class TankPathDrawer : MonoBehaviour
         if (!agent.pathPending && agent.remainingDistance > 0f && agent.remainingDistance < 0.5f)
             StartFadeOut();
     }
+
 
     private void StartFadeOut()
     {
@@ -143,4 +155,30 @@ public class TankPathDrawer : MonoBehaviour
             SetDestination(hit.position);
         }
     }
+
+    public void HidePath()
+    {
+        isPathVisible = false;
+        fadingOut = false;
+        currentAlpha = 0f;
+
+        lineRenderer.positionCount = 0;
+        lineRenderer.enabled = false;
+    }
+
+    public void ShowLastPath()
+    {
+        if (lastPath == null || lastPath.corners.Length == 0)
+            return;
+
+        isPathVisible = true;
+        fadingOut = false;
+        currentAlpha = 1f;
+        lineRenderer.enabled = true;
+
+        lineRenderer.positionCount = lastPath.corners.Length;
+        lineRenderer.SetPositions(lastPath.corners);
+    }
+
+
 }
