@@ -12,37 +12,50 @@ public class MouseSelect : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            RaycastHit hit = CastRay();
+
+            if (hit.collider == null)
+            {
+                Deselect();
+                return;
+            }
+
+            if (!hit.collider.CompareTag(selectableTag))
+            {
+                Deselect();
+                return;
+            }
+
+            TankHealth hitHealth = hit.collider.GetComponentInParent<TankHealth>();
+            if (hitHealth != null && hitHealth.isDead)
+            {
+                Deselect();
+                return;
+            }
+
+            GameObject hitObj = hit.collider.gameObject;
+
             if (selectedObject == null)
             {
-                RaycastHit hit = CastRay();
-                if (hit.collider == null || !hit.collider.CompareTag(selectableTag))
-                    return;
-
-                selectedObject = hit.collider.gameObject;
-
-                Outline outline = selectedObject.GetComponent<Outline>();
-                if (outline != null)
-                    outline.enabled = true;
-
-                TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
-                if (drawer != null)
-                    drawer.ShowLastPath();
+                Select(hitObj);
             }
             else
             {
-                Outline outline = selectedObject.GetComponent<Outline>();
-                if (outline != null) outline.enabled = false;
-
-                TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
-                if (drawer != null) drawer.HidePath();
-
-                selectedObject = null;
+                Deselect();
+                Select(hitObj);
             }
         }
 
 
         if (Input.GetMouseButtonDown(1) && selectedObject != null)
         {
+            TankHealth selHealth = selectedObject.GetComponent<TankHealth>();
+            if (selHealth != null && selHealth.isDead)
+            {
+                Deselect();
+                return;
+            }
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -72,17 +85,42 @@ public class MouseSelect : MonoBehaviour
             if (hideDrawer != null)
                 hideDrawer.HidePath();
         }
+    }
 
+    private void Select(GameObject obj)
+    {
+        selectedObject = obj;
 
+        Outline outline = selectedObject.GetComponent<Outline>();
+        if (outline != null)
+            outline.enabled = true;
 
+        TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
+        if (drawer != null)
+            drawer.ShowLastPath();
+    }
+
+    private void Deselect()
+    {
+        if (selectedObject == null) return;
+
+        Outline outline = selectedObject.GetComponent<Outline>();
+        if (outline != null) outline.enabled = false;
+
+        TankPathDrawer drawer = selectedObject.GetComponent<TankPathDrawer>();
+        if (drawer != null) drawer.HidePath();
+
+        selectedObject = null;
     }
 
     private RaycastHit CastRay()
     {
         Vector3 screenFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
         Vector3 screenNear = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+
         Vector3 far = Camera.main.ScreenToWorldPoint(screenFar);
         Vector3 near = Camera.main.ScreenToWorldPoint(screenNear);
+
         RaycastHit hit;
         Physics.Raycast(near, far - near, out hit);
         return hit;

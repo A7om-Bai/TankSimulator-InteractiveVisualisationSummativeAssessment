@@ -2049,6 +2049,8 @@ GameObject:
   - component: {fileID: 1972212286989112517}
   - component: {fileID: 6793670608757850478}
   - component: {fileID: 3178368921727162224}
+  - component: {fileID: 3186807599115519784}
+  - component: {fileID: 6419837338345288}
   m_Layer: 0
   m_Name: KV_2
   m_TagString: Selectable
@@ -2386,6 +2388,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   factionType: 1
+--- !u!114 &3186807599115519784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425339333967378869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac70d1116b95c248ba97622fc73408a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireInterval: 2
+  detectionRange: 20
+  rotateSpeed: 5
+  turret: {fileID: 4941062989069031329}
+  firePoint: {fileID: 9153344500441590684}
+  shellPrefab: {fileID: 2989000923634411228, guid: 44cdcd55c8562cc46b31e272eb09fc5b, type: 3}
+--- !u!114 &6419837338345288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425339333967378869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e93ef057cb2ce940b4e5408dfba87d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  isDead: 0
+  deathEffect: {fileID: 100002, guid: b2e8413438f79464aa69948979b150a8, type: 3}
 --- !u!1 &6878221337429421493
 GameObject:
   m_ObjectHideFlags: 0
