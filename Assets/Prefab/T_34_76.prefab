@@ -1800,6 +1800,7 @@ GameObject:
   - component: {fileID: -7999196297501153055}
   - component: {fileID: 7682071369720852866}
   - component: {fileID: 5005060365719982336}
+  - component: {fileID: 2193822756255259818}
   m_Layer: 0
   m_Name: T_34_76
   m_TagString: Selectable
@@ -2123,6 +2124,20 @@ MonoBehaviour:
   dashScrollSpeed: 0.6
   dashRepeatFactor: 1
   fadeOutSpeed: 2
+  isPathVisible: 1
+--- !u!114 &2193822756255259818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611877491239967893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a318e51004a5fa342889dcb2d755bbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factionType: 1
 --- !u!1 &8019616741835341167
 GameObject:
   m_ObjectHideFlags: 0
