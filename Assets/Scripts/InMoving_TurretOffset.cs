@@ -19,7 +19,7 @@ public class InMoving_TurretOffset : MonoBehaviour
 
     private float lastTankYAngle;
     private Vector3 lastTankPosition;
-    private float currentOffsetAngle = 0f;
+    public float CurrentOffsetAngle { get; private set; } = 0f;
     private bool offsetDirection = true;
     private float idleSwayTimer = 0f; // Timer for idle sway
 
@@ -45,7 +45,7 @@ public class InMoving_TurretOffset : MonoBehaviour
         float angleDelta = Mathf.DeltaAngle(lastTankYAngle, currentYAngle);
 
         // Calculate the target offset angle based on the tank's rotation
-        float targetOffsetAngle = currentOffsetAngle - angleDelta;
+        float targetOffsetAngle = CurrentOffsetAngle - angleDelta;
         targetOffsetAngle = Mathf.Clamp(targetOffsetAngle, -maxOffsetAngle, maxOffsetAngle);
 
         // Calculate the tank's movement speed
@@ -71,14 +71,14 @@ public class InMoving_TurretOffset : MonoBehaviour
             float idleSway = Mathf.Sin(idleSwayTimer) * idleSwayAmplitude;
 
             // Gradually reduce the target offset angle towards the idle sway
-            targetOffsetAngle = Mathf.Lerp(currentOffsetAngle, idleSway, Time.deltaTime * (offsetSpeed * 0.5f));
+            targetOffsetAngle = Mathf.Lerp(CurrentOffsetAngle, idleSway, Time.deltaTime * (offsetSpeed * 0.5f));
         }
 
         // Smoothly transition to the target offset angle
-        currentOffsetAngle = Mathf.Lerp(currentOffsetAngle, targetOffsetAngle, Time.deltaTime * offsetSpeed);
+        CurrentOffsetAngle = Mathf.Lerp(CurrentOffsetAngle, targetOffsetAngle, Time.deltaTime * offsetSpeed);
 
         // Apply the rotation to the turret
-        transform.localRotation = Quaternion.Euler(0f, currentOffsetAngle, 0f);
+        transform.localRotation = Quaternion.Euler(0f, CurrentOffsetAngle, 0f);
 
         // Update the last known tank state
         lastTankYAngle = currentYAngle;

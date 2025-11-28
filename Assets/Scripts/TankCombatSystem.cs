@@ -65,6 +65,13 @@ public class TankCombatSystem : MonoBehaviour
         dir.y = 0;
         Quaternion desired = Quaternion.LookRotation(dir);
 
+        // 获取偏移角度
+        InMoving_TurretOffset offsetScript = turret.GetComponent<InMoving_TurretOffset>();
+        float offsetAngle = offsetScript != null ? offsetScript.CurrentOffsetAngle : 0f;
+
+        // 应用偏移
+        desired = Quaternion.Euler(0f, desired.eulerAngles.y + offsetAngle, 0f);
+
         float angle = Quaternion.Angle(turret.rotation, desired);
         if (angle > 0.1f)
         {
