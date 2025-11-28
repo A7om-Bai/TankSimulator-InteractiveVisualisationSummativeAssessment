@@ -2040,8 +2040,8 @@ GameObject:
   - component: {fileID: 8029986083023260582}
   - component: {fileID: 1309205482512167312}
   - component: {fileID: 4690413354822028649}
+  - component: {fileID: 2162753057450742601}
   - component: {fileID: -927047010913840425}
-  - component: {fileID: 555569638016353676}
   - component: {fileID: -4580957834423855203}
   - component: {fileID: 7285892389406291201}
   - component: {fileID: -5016716477857963896}
@@ -2134,23 +2134,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-927047010913840425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6425339333967378869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16071cad737b7d94f8a54c873ce73540, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSources:
-  - {fileID: 2003363419923017279, guid: 5fa8a2ba255b4a2409d5ceccbe481b29, type: 3}
-  - {fileID: 5171424777125399653, guid: e3d7db02de3688b4ba45109d6c014dd0, type: 3}
-  - {fileID: 6954296243815068192, guid: 79c729257dce91242832d564f0a2355e, type: 3}
---- !u!65 &555569638016353676
+--- !u!65 &2162753057450742601
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2169,8 +2153,24 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.214611, y: 1.4955035, z: 6.371873}
-  m_Center: {x: -0.00000059604645, y: 1.034178, z: -0.14179385}
+  m_Size: {x: 3.214611, y: 2.7808444, z: 6.371873}
+  m_Center: {x: -0.00000059604645, y: 1.6768488, z: -0.14179373}
+--- !u!114 &-927047010913840425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425339333967378869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16071cad737b7d94f8a54c873ce73540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 2003363419923017279, guid: 5fa8a2ba255b4a2409d5ceccbe481b29, type: 3}
+  - {fileID: 5171424777125399653, guid: e3d7db02de3688b4ba45109d6c014dd0, type: 3}
+  - {fileID: 6954296243815068192, guid: 79c729257dce91242832d564f0a2355e, type: 3}
 --- !u!114 &-4580957834423855203
 MonoBehaviour:
   m_ObjectHideFlags: 0

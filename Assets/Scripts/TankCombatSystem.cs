@@ -64,9 +64,12 @@ public class TankCombatSystem : MonoBehaviour
         Vector3 dir = target.position - turret.position;
         dir.y = 0;
         Quaternion desired = Quaternion.LookRotation(dir);
-        turret.rotation = Quaternion.Slerp(turret.rotation, desired, rotateSpeed * Time.deltaTime);
 
         float angle = Quaternion.Angle(turret.rotation, desired);
+        if (angle > 0.1f)
+        {
+            turret.rotation = Quaternion.Slerp(turret.rotation, desired, rotateSpeed * Time.deltaTime);
+        }
 
         if (angle < 4f && fireTimer <= 0f)
         {
