@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class TankHealth : MonoBehaviour
 {
@@ -15,14 +15,17 @@ public class TankHealth : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        Debug.Log($"TakeDamage called with dmg: {dmg}");
         if (isDead) return;
         currentHealth -= dmg;
+        Debug.Log($"Current health: {currentHealth}");
         if (currentHealth <= 0f)
             Die();
     }
 
     public void Die()
     {
+        Debug.Log($"{gameObject.name} has died.");
         if (isDead) return;
         isDead = true;
 
@@ -40,5 +43,7 @@ public class TankHealth : MonoBehaviour
 
         if (deathEffect != null)
             Instantiate(deathEffect, transform.position, Quaternion.identity, transform);
+
+        Debug.Log($"{gameObject.name} has died.");
     }
 }

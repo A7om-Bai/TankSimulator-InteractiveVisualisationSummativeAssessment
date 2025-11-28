@@ -41,8 +41,6 @@ public class Scroll_Track_MaterialOffset : MonoBehaviour
             // Calculate rotation-based offset
             float rotationDelta = Quaternion.Angle(lastRotation, transform.rotation);
 
-            // Debug logs to check movement and rotation values
-            Debug.Log($"Distance Moved: {distanceMoved}, Rotation Delta: {rotationDelta}");
 
             // Ignore small movements and rotations below the thresholds
             if (distanceMoved > movementThreshold || rotationDelta > rotationThreshold)
@@ -53,7 +51,6 @@ public class Scroll_Track_MaterialOffset : MonoBehaviour
                 // Apply the offset to the material
                 trackRenderer.material.SetTextureOffset("_BaseMap", new Vector2(offset, 0f));
 
-                Debug.Log($"Offset Applied: {offset}");
             }
 
             // Update the last position and rotation
