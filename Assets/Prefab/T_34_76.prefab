@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac70d1116b95c248ba97622fc73408a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireInterval: 4
+  fireInterval: 6
   detectionRange: 20
   rotateSpeed: 3
   turret: {fileID: 6353955503779590376}
