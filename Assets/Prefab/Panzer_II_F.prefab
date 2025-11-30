@@ -741,9 +741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac70d1116b95c248ba97622fc73408a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireInterval: 2
+  fireInterval: 4
   detectionRange: 20
-  rotateSpeed: 5
+  rotateSpeed: 3
   turret: {fileID: 5836309061839747731}
   firePoint: {fileID: 1955549666462745628}
   shellPrefab: {fileID: 2989000923634411228, guid: 44cdcd55c8562cc46b31e272eb09fc5b, type: 3}

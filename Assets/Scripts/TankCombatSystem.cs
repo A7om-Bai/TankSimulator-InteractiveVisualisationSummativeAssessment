@@ -51,8 +51,20 @@ public class TankCombatSystem : MonoBehaviour
             if (f != null && th != null && !th.isDead &&
                 f.factionType != myFaction.factionType)
             {
-                target = h.GetComponentInParent<Transform>();
-                return;
+                // 计算目标方向与坦克正前方的夹角
+                Vector3 directionToTarget = (h.transform.position - transform.position).normalized;
+                float angleToTarget = Vector3.Angle(transform.forward, directionToTarget);
+
+                // 获取炮塔脚本中的最大偏移角度
+                InMoving_TurretOffset offsetScript = turret.GetComponent<InMoving_TurretOffset>();
+                float maxLockAngle = offsetScript != null ? offsetScript.maxOffsetAngle : 30f; // 默认30度
+
+                // 如果目标在允许的角度范围内，则锁定目标
+                if (angleToTarget <= maxLockAngle)
+                {
+                    target = h.GetComponentInParent<Transform>();
+                    return;
+                }
             }
         }
     }

@@ -6,7 +6,7 @@ public class InMoving_TurretOffset : MonoBehaviour
     private Transform tankBody;
 
     [SerializeField]
-    private float maxOffsetAngle = 20f;
+    public float maxOffsetAngle = 30f;
 
     [SerializeField]
     private float offsetSpeed = 4f;
@@ -76,9 +76,6 @@ public class InMoving_TurretOffset : MonoBehaviour
 
         // Smoothly transition to the target offset angle
         CurrentOffsetAngle = Mathf.Lerp(CurrentOffsetAngle, targetOffsetAngle, Time.deltaTime * offsetSpeed);
-
-        // Apply the rotation to the turret
-        transform.localRotation = Quaternion.Euler(0f, CurrentOffsetAngle, 0f);
 
         // Update the last known tank state
         lastTankYAngle = currentYAngle;
