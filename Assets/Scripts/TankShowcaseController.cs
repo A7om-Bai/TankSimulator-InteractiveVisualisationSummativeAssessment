@@ -16,9 +16,22 @@ public class TankShowcaseController : MonoBehaviour
     public GameObject turret;
     public GameObject turretControl;
 
+    [Header("Audio Settings")]
+    public AudioSource audioSource;
+    public AudioClip audioSourceClip;
+
+    // --- 内构、说明文字 ---
     private Dictionary<int, GameObject> moduleByKey = new Dictionary<int, GameObject>();
     private Dictionary<int, string> descByKey = new Dictionary<int, string>();
 
+    // --- 状态记录（用于检测重复按键） ---
+    private int currentMode = 0;
+    private bool descriptionVisible = false;
+
+
+    // ==========================================================
+    //                     初始化
+    // ==========================================================
     void Awake()
     {
         moduleByKey[3] = engine;
@@ -40,23 +53,86 @@ public class TankShowcaseController : MonoBehaviour
 
     void Start()
     {
-        ShowDefault();
+        UI_DescriptionPanel.Hide();   // 开场隐藏 UI
+        ShowDefault(false, false);    // 初始化模型：不显示UI、不播放声音
     }
 
+
+    // ==========================================================
+    //                     Update 监听按键
+    // ==========================================================
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) ShowDefault();
-        if (Input.GetKeyDown(KeyCode.Alpha2)) ShowXRay();
-        if (Input.GetKeyDown(KeyCode.Alpha3)) ShowModule(3);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) ShowModule(4);
-        if (Input.GetKeyDown(KeyCode.Alpha5)) ShowModule(5);
-        if (Input.GetKeyDown(KeyCode.Alpha6)) ShowModule(6);
-        if (Input.GetKeyDown(KeyCode.Alpha7)) ShowModule(7);
-        if (Input.GetKeyDown(KeyCode.Alpha8)) ShowModule(8);
+        CheckKey(KeyCode.Alpha1, 1);
+        CheckKey(KeyCode.Alpha2, 2);
+        CheckKey(KeyCode.Alpha3, 3);
+        CheckKey(KeyCode.Alpha4, 4);
+        CheckKey(KeyCode.Alpha5, 5);
+        CheckKey(KeyCode.Alpha6, 6);
+        CheckKey(KeyCode.Alpha7, 7);
+        CheckKey(KeyCode.Alpha8, 8);
     }
 
 
-    // ====================== Exterior Material Switch ======================
+    // ==========================================================
+    //         核心逻辑：重复按相同按键 → 隐藏说明面板
+    // ==========================================================
+    void CheckKey(KeyCode key, int mode)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            // 再次按下当前模式 → 关闭 UI，并播放音效
+            if (currentMode == mode && descriptionVisible)
+            {
+                UI_DescriptionPanel.Hide();
+                descriptionVisible = false;
+
+                // 播放关闭提示音
+                PlaySound(audioSourceClip);
+                return;
+            }
+
+            // 切换模式
+            ActivateMode(mode);
+            currentMode = mode;
+            descriptionVisible = true;
+        }
+    }
+
+
+    // ==========================================================
+    //                 模式触发（1~8）
+    // ==========================================================
+    void ActivateMode(int mode)
+    {
+        switch (mode)
+        {
+            case 1:
+                ShowDefault(true, true);
+                break;
+            case 2:
+                ShowXRay();
+                break;
+            default:
+                ShowModule(mode);
+                break;
+        }
+    }
+
+
+    // ==========================================================
+    //                     音效播放
+    // ==========================================================    
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+            audioSource.PlayOneShot(clip);
+    }
+
+
+    // ==========================================================
+    //               外观材质切换工具函数
+    // ==========================================================
     void ApplyExteriorMaterial(Material m)
     {
         foreach (var r in exteriorRenderers)
@@ -67,38 +143,52 @@ public class TankShowcaseController : MonoBehaviour
     }
 
 
-    // ========================= Modes =========================
-
+    // ==========================================================
+    //                     内构显示控制
+    // ==========================================================
     void HideAllModules()
     {
         foreach (var kv in moduleByKey)
-        {
             if (kv.Value != null)
                 kv.Value.SetActive(false);
-        }
     }
 
-    public void ShowDefault()
+
+    // ==========================================================
+    //                     模式：默认装甲
+    // ==========================================================
+    public void ShowDefault(bool showUI = true, bool playSound = true)
     {
         ApplyExteriorMaterial(normalExteriorMaterial);
         HideAllModules();
-        UI_DescriptionPanel.Show(descByKey[1]);
+
+        if (showUI)
+            UI_DescriptionPanel.Show(descByKey[1]);
+
+        if (playSound)
+            PlaySound(audioSourceClip);
     }
 
+
+    // ==========================================================
+    //                     模式：全 X 光
+    // ==========================================================
     public void ShowXRay()
     {
         ApplyExteriorMaterial(xrayExteriorMaterial);
 
-        // 让所有内构显示
         foreach (var kv in moduleByKey)
-        {
             if (kv.Value != null)
                 kv.Value.SetActive(true);
-        }
 
         UI_DescriptionPanel.Show(descByKey[2]);
+        PlaySound(audioSourceClip);
     }
 
+
+    // ==========================================================
+    //                     模式：单一模块
+    // ==========================================================
     public void ShowModule(int key)
     {
         ApplyExteriorMaterial(xrayExteriorMaterial);
@@ -108,5 +198,6 @@ public class TankShowcaseController : MonoBehaviour
             moduleByKey[key].SetActive(true);
 
         UI_DescriptionPanel.Show(descByKey[key]);
+        PlaySound(audioSourceClip);
     }
 }
