@@ -5630,12 +5630,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2046511123212597796, guid: d136dc40a04943345a4de390a21c0dfd, type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2046511123212597796, guid: d136dc40a04943345a4de390a21c0dfd, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 31fc8f9414b2cb948849f01acbcd28c5, type: 3}
+      objectReference: {fileID: 8300000, guid: 1fb0ef91f878346439103a281bdb8f3e, type: 3}
     - target: {fileID: 4941156743589808097, guid: d136dc40a04943345a4de390a21c0dfd, type: 3}
       propertyPath: m_Name
       value: Background Music
