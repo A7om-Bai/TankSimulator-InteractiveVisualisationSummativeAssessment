@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class ExitManager : MonoBehaviour
@@ -10,6 +11,11 @@ public class ExitManager : MonoBehaviour
     {
         Debug.Log("The Game is Quitting...");
         Application.Quit();
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("01Menu");
     }
 
     public void ShowWindow()
