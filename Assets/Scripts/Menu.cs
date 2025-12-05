@@ -7,4 +7,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("02MainMap");
     }
+
+    public void Garage()
+    {
+        SceneManager.LoadScene("03Garage");
+    }
 }
