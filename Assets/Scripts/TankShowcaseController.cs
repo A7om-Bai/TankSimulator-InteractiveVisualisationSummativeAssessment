@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using UnityEngine;
 
 public class TankShowcaseController : MonoBehaviour
@@ -7,6 +7,9 @@ public class TankShowcaseController : MonoBehaviour
     public List<MeshRenderer> exteriorRenderers = new List<MeshRenderer>();
     public Material normalExteriorMaterial;
     public Material xrayExteriorMaterial;
+
+
+    public GarageUIManager GarageUImanager;
 
     [Header("Interior Modules")]
     public GameObject engine;
@@ -20,17 +23,17 @@ public class TankShowcaseController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioSourceClip;
 
-    // --- ÄÚ¹¹¡¢ËµÃ÷ÎÄ×Ö ---
+    // --- å†…æ„ã€è¯´æ˜æ–‡å­— ---
     private Dictionary<int, GameObject> moduleByKey = new Dictionary<int, GameObject>();
     private Dictionary<int, string> descByKey = new Dictionary<int, string>();
 
-    // --- ×´Ì¬¼ÇÂ¼£¨ÓÃÓÚ¼ì²âÖØ¸´°´¼ü£© ---
+    // --- çŠ¶æ€è®°å½•ï¼ˆç”¨äºæ£€æµ‹é‡å¤æŒ‰é”®ï¼‰ ---
     private int currentMode = 0;
     private bool descriptionVisible = false;
 
 
     // ==========================================================
-    //                     ³õÊ¼»¯
+    //                     åˆå§‹åŒ–
     // ==========================================================
     void Awake()
     {
@@ -42,7 +45,7 @@ public class TankShowcaseController : MonoBehaviour
         moduleByKey[8] = turretControl;
 
         descByKey[1] = "Standard armor exterior.";
-        descByKey[2] = "Full X-ray transparent mode.";
+        descByKey[2] = "TheÂ Panzerkampfwagen VI AusfÃ¼hrung H1 (Tiger H1)Â is the first (early-production) variant of the Tiger I heavy tank family, designed and built by Henschel and used by the German Army during World War II. It offered the German Army its first armoured fighting vehicle equipped with the 88 mm Kampfwagenkanone (KwK) 36 tank gun, developed from the 88 mm Flugabwehrkanone (FlaK) 36 anti-aircraft gun.\r\nWeight:\r\n54 Tonnes\r\n57 Tonnes(Combat weight)\r\nLength\r\n6.30m\r\nHight\r\n3.00m.";
         descByKey[3] = "Engine module.";
         descByKey[4] = "Crew arrangements.";
         descByKey[5] = "GearBox structure.";
@@ -53,13 +56,15 @@ public class TankShowcaseController : MonoBehaviour
 
     void Start()
     {
-        UI_DescriptionPanel.Hide();   // ¿ª³¡Òş²Ø UI
-        ShowDefault(false, false);    // ³õÊ¼»¯Ä£ĞÍ£º²»ÏÔÊ¾UI¡¢²»²¥·ÅÉùÒô
+        UI_DescriptionPanel.Hide();   // å¼€åœºéšè— UI
+        ShowDefault(false, false);    // åˆå§‹åŒ–æ¨¡å‹ï¼šä¸æ˜¾ç¤ºUIã€ä¸æ’­æ”¾å£°éŸ³
+        if (GarageUImanager != null)
+            GarageUImanager.HideUI();
     }
 
 
     // ==========================================================
-    //                     Update ¼àÌı°´¼ü
+    //                     Update ç›‘å¬æŒ‰é”®
     // ==========================================================
     void Update()
     {
@@ -75,24 +80,27 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //         ºËĞÄÂß¼­£ºÖØ¸´°´ÏàÍ¬°´¼ü ¡ú Òş²ØËµÃ÷Ãæ°å
+    //         æ ¸å¿ƒé€»è¾‘ï¼šé‡å¤æŒ‰ç›¸åŒæŒ‰é”® â†’ éšè—è¯´æ˜é¢æ¿
     // ==========================================================
     void CheckKey(KeyCode key, int mode)
     {
         if (Input.GetKeyDown(key))
         {
-            // ÔÙ´Î°´ÏÂµ±Ç°Ä£Ê½ ¡ú ¹Ø±Õ UI£¬²¢²¥·ÅÒôĞ§
+            // å†æ¬¡æŒ‰ä¸‹å½“å‰æ¨¡å¼ â†’ å…³é—­ UIï¼Œå¹¶æ’­æ”¾éŸ³æ•ˆ
             if (currentMode == mode && descriptionVisible)
             {
                 UI_DescriptionPanel.Hide();
                 descriptionVisible = false;
 
-                // ²¥·Å¹Ø±ÕÌáÊ¾Òô
+                if (GarageUImanager != null)
+                    GarageUImanager.HideUI();
+
+                // æ’­æ”¾å…³é—­æç¤ºéŸ³
                 PlaySound(audioSourceClip);
                 return;
             }
 
-            // ÇĞ»»Ä£Ê½
+            // åˆ‡æ¢æ¨¡å¼
             ActivateMode(mode);
             currentMode = mode;
             descriptionVisible = true;
@@ -101,7 +109,7 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //                 Ä£Ê½´¥·¢£¨1~8£©
+    //                 æ¨¡å¼è§¦å‘ï¼ˆ1~8ï¼‰
     // ==========================================================
     void ActivateMode(int mode)
     {
@@ -121,7 +129,7 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //                     ÒôĞ§²¥·Å
+    //                     éŸ³æ•ˆæ’­æ”¾
     // ==========================================================    
     void PlaySound(AudioClip clip)
     {
@@ -131,7 +139,7 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //               Íâ¹Û²ÄÖÊÇĞ»»¹¤¾ßº¯Êı
+    //               å¤–è§‚æè´¨åˆ‡æ¢å·¥å…·å‡½æ•°
     // ==========================================================
     void ApplyExteriorMaterial(Material m)
     {
@@ -144,7 +152,7 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //                     ÄÚ¹¹ÏÔÊ¾¿ØÖÆ
+    //                     å†…æ„æ˜¾ç¤ºæ§åˆ¶
     // ==========================================================
     void HideAllModules()
     {
@@ -155,7 +163,7 @@ public class TankShowcaseController : MonoBehaviour
 
 
     // ==========================================================
-    //                     Ä£Ê½£ºÄ¬ÈÏ×°¼×
+    //                     æ¨¡å¼ï¼šé»˜è®¤è£…ç”²
     // ==========================================================
     public void ShowDefault(bool showUI = true, bool playSound = true)
     {
@@ -165,13 +173,18 @@ public class TankShowcaseController : MonoBehaviour
         if (showUI)
             UI_DescriptionPanel.Show(descByKey[1]);
 
+        if (GarageUImanager != null)
+            GarageUImanager.ShowUI(1);
+
+
+
         if (playSound)
             PlaySound(audioSourceClip);
     }
 
 
     // ==========================================================
-    //                     Ä£Ê½£ºÈ« X ¹â
+    //                     æ¨¡å¼ï¼šå…¨ X å…‰
     // ==========================================================
     public void ShowXRay()
     {
@@ -182,12 +195,15 @@ public class TankShowcaseController : MonoBehaviour
                 kv.Value.SetActive(true);
 
         UI_DescriptionPanel.Show(descByKey[2]);
+
+        if (GarageUImanager != null)
+            GarageUImanager.ShowUI(2);
         PlaySound(audioSourceClip);
     }
 
 
     // ==========================================================
-    //                     Ä£Ê½£ºµ¥Ò»Ä£¿é
+    //                     æ¨¡å¼ï¼šå•ä¸€æ¨¡å—
     // ==========================================================
     public void ShowModule(int key)
     {
@@ -198,6 +214,9 @@ public class TankShowcaseController : MonoBehaviour
             moduleByKey[key].SetActive(true);
 
         UI_DescriptionPanel.Show(descByKey[key]);
+
+        if (GarageUImanager != null)
+            GarageUImanager.ShowUI(key);
         PlaySound(audioSourceClip);
     }
 }
