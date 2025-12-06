@@ -3292,6 +3292,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonClick
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 6368418712614167917, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
+      propertyPath: Priority
+      value: 128
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 8419283304652028773, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.576281
