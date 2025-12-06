@@ -3293,6 +3293,7 @@ PrefabInstance:
       value: ButtonClick
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
     - target: {fileID: 6368418712614167917, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
@@ -3306,6 +3307,8 @@ PrefabInstance:
       value: 130
       objectReference: {fileID: 0}
 >>>>>>> 12/6-Evening
+=======
+>>>>>>> parent of 10a3e3c (MenuFinalVersion12/6)
     - target: {fileID: 8419283304652028773, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.576281
