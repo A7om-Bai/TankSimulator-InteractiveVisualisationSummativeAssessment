@@ -44,14 +44,14 @@ public class TankShowcaseController : MonoBehaviour
         moduleByKey[7] = turret;
         moduleByKey[8] = turretControl;
 
-        descByKey[1] = "Standard armor exterior.";
-        descByKey[2] = "The Panzerkampfwagen VI Ausführung H1 (Tiger H1) is the first (early-production) variant of the Tiger I heavy tank family, designed and built by Henschel and used by the German Army during World War II. It offered the German Army its first armoured fighting vehicle equipped with the 88 mm Kampfwagenkanone (KwK) 36 tank gun, developed from the 88 mm Flugabwehrkanone (FlaK) 36 anti-aircraft gun.\r\nWeight:\r\n54 Tonnes\r\n57 Tonnes(Combat weight)\r\nLength\r\n6.30m\r\nHight\r\n3.00m.";
+        descByKey[1] = "ArmorThickness.";
+        descByKey[2] = "The Tiger H1 ";
         descByKey[3] = "Engine module.";
         descByKey[4] = "Crew arrangements.";
         descByKey[5] = "GearBox structure.";
-        descByKey[6] = "MachineGun components.";
-        descByKey[7] = "Turret structure.";
-        descByKey[8] = "Turret control gear.";
+        descByKey[6] = "MachineGun.";
+        descByKey[7] = "Main Gun.";
+        descByKey[8] = "Turret control system.";
     }
 
     void Start()
