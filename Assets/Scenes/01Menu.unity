@@ -2695,6 +2695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e98e43c81747a44b446883608e2d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 0}
 --- !u!114 &1943672045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,23 +3293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonClick
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-    - target: {fileID: 6368418712614167917, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
-      propertyPath: Priority
-      value: 128
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
-=======
     - target: {fileID: 6368418712614167917, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
       propertyPath: Priority
       value: 130
       objectReference: {fileID: 0}
->>>>>>> 12/6-Evening
-=======
->>>>>>> parent of 10a3e3c (MenuFinalVersion12/6)
     - target: {fileID: 8419283304652028773, guid: 8eec5e551d0f2cb46a2bab6f79729b9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.576281
@@ -3430,19 +3418,51 @@ PrefabInstance:
     - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1367717605}
+      objectReference: {fileID: 1202202546}
     - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1202202546}
+      objectReference: {fileID: 1367717605}
+    - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ExitManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1367717605}
+      objectReference: {fileID: 1202202546}
     - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1202202546}
+      objectReference: {fileID: 1367717605}
+    - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HideWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 991875970159600333, guid: f030461e31897e2489d2632743811fff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ExitManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1492014838995218112, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
