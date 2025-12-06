@@ -3429,7 +3429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Quit
+      value: ReturnToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 193486159146248949, guid: f030461e31897e2489d2632743811fff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
