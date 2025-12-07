@@ -10,6 +10,8 @@ public class TankShowcaseController : MonoBehaviour
 
 
     public GarageUIManager GarageUImanager;
+    public UI_KeyBarController keyBar;
+
 
     [Header("Interior Modules")]
     public GameObject engine;
@@ -86,7 +88,7 @@ public class TankShowcaseController : MonoBehaviour
     {
         if (Input.GetKeyDown(key))
         {
-            // 再次按下当前模式 → 关闭 UI，并播放音效
+            // === 重复按：关闭 ===
             if (currentMode == mode && descriptionVisible)
             {
                 UI_DescriptionPanel.Hide();
@@ -95,18 +97,24 @@ public class TankShowcaseController : MonoBehaviour
                 if (GarageUImanager != null)
                     GarageUImanager.HideUI();
 
-                // 播放关闭提示音
+                // ✅【第四步：KeyBar 关闭】
+                if (keyBar != null)
+                    keyBar.ToggleKey(mode);
+
                 PlaySound(audioSourceClip);
                 return;
             }
 
-            // 切换模式
+            // === 新模式 ===
             ActivateMode(mode);
             currentMode = mode;
             descriptionVisible = true;
+
+            // ✅【第四步：KeyBar 高亮】
+            if (keyBar != null)
+                keyBar.ToggleKey(mode);
         }
     }
-
 
     // ==========================================================
     //                 模式触发（1~8）
