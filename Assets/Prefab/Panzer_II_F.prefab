@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5481555066865410622}
   - component: {fileID: 3659875863008196245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheels_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 3746167684021713813}
   - component: {fileID: 3030783203258461389}
   - component: {fileID: 3908041379312362790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 5386217452027282275}
   - component: {fileID: 4864590795869086851}
   - component: {fileID: 6232735469767757143}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3059111115871295158}
   - component: {fileID: 2171793294113030232}
   - component: {fileID: 8840070987538622011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7890834032274811157}
   - component: {fileID: 9115673547935580502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheels_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 2206570693150264508}
   - component: {fileID: 2307015097779184774}
   - component: {fileID: 9083970768261662866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F
   m_TagString: Selectable
   m_Icon: {fileID: 0}
@@ -747,6 +747,10 @@ MonoBehaviour:
   turret: {fileID: 5836309061839747731}
   firePoint: {fileID: 1955549666462745628}
   shellPrefab: {fileID: 2989000923634411228, guid: 44cdcd55c8562cc46b31e272eb09fc5b, type: 3}
+  muzzleFlash: {fileID: 8258931248158700656}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &9083970768261662866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +778,7 @@ GameObject:
   - component: {fileID: 2297375937622149535}
   - component: {fileID: 8435759082445645941}
   - component: {fileID: 9158599641772206563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Track_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +880,7 @@ GameObject:
   - component: {fileID: 4197295161897383185}
   - component: {fileID: 8494305279492804448}
   - component: {fileID: 2262593212461096532}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2028024781983124767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Muzzle_MG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +997,7 @@ GameObject:
   - component: {fileID: 4208263580491238517}
   - component: {fileID: 1810131117244755670}
   - component: {fileID: 8799024098942774390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1083,7 @@ GameObject:
   - component: {fileID: 8007059425321867967}
   - component: {fileID: 2848824243764956295}
   - component: {fileID: 182905058974460042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1165,7 +1169,7 @@ GameObject:
   - component: {fileID: 8967808376013592650}
   - component: {fileID: 6188890092855619358}
   - component: {fileID: 3720175513411816693}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Idler_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1255,7 @@ GameObject:
   - component: {fileID: 9054274688635377163}
   - component: {fileID: 4550344853494157369}
   - component: {fileID: 7411327714604264113}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Sprocket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,7 +1341,7 @@ GameObject:
   - component: {fileID: 4693631284259613995}
   - component: {fileID: 6820083150645975060}
   - component: {fileID: 1489689969502801912}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Idler_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1427,7 @@ GameObject:
   - component: {fileID: 2871367482735002689}
   - component: {fileID: 2296530391646686280}
   - component: {fileID: 7896709539203814907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Sprocket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1513,7 @@ GameObject:
   - component: {fileID: 4187513953513219470}
   - component: {fileID: 1377065969638044397}
   - component: {fileID: 6774086267268339687}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1599,7 @@ GameObject:
   - component: {fileID: 2523348213510330453}
   - component: {fileID: 5710636958731806080}
   - component: {fileID: 3320517569773263678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1685,7 @@ GameObject:
   - component: {fileID: 3766293931136919569}
   - component: {fileID: 223728785462141155}
   - component: {fileID: 1807458704628527644}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Mantlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1773,7 @@ GameObject:
   - component: {fileID: 4829884242801829078}
   - component: {fileID: 6265780346005285831}
   - component: {fileID: 573598790388675885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1856,7 +1860,7 @@ GameObject:
   - component: {fileID: 7900782482107719791}
   - component: {fileID: 7254158114928806758}
   - component: {fileID: 3760110187301179317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Track_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1958,7 +1962,7 @@ GameObject:
   - component: {fileID: 6053154200387640308}
   - component: {fileID: 25527920528774912}
   - component: {fileID: 781992653708908316}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +2046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4853781806497800957}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2079,7 @@ GameObject:
   - component: {fileID: 2767834949127128685}
   - component: {fileID: 7783949471703517555}
   - component: {fileID: 1393045529727540106}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2161,7 +2165,7 @@ GameObject:
   - component: {fileID: 1222093850043236705}
   - component: {fileID: 4126920260073916311}
   - component: {fileID: 6246142746943939230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2251,7 @@ GameObject:
   - component: {fileID: 4303888414723313842}
   - component: {fileID: 5794205105906500281}
   - component: {fileID: 7269695781706624162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2337,7 @@ GameObject:
   - component: {fileID: 4513277652438833541}
   - component: {fileID: 9100338104226896729}
   - component: {fileID: 660411367062587186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2417,7 +2421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1955549666462745628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2436,7 +2440,8 @@ Transform:
   m_LocalPosition: {x: -0.00000029802322, y: 0, z: 0.9226804}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8258931248177049904}
   m_Father: {fileID: 7034839755022666237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8123698334064693253
@@ -2450,7 +2455,7 @@ GameObject:
   - component: {fileID: 3040556382510276210}
   - component: {fileID: 6856776503801604509}
   - component: {fileID: 8883069684133626783}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Roller1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2536,7 +2541,7 @@ GameObject:
   - component: {fileID: 6954403197038851668}
   - component: {fileID: 1160784617974543546}
   - component: {fileID: 6260213269962440240}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2623,7 +2628,7 @@ GameObject:
   - component: {fileID: 6437401696832159517}
   - component: {fileID: 7459450127438362511}
   - component: {fileID: 147720327257263313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2727,7 +2732,7 @@ GameObject:
   - component: {fileID: 8920781705645296085}
   - component: {fileID: 8228967390286762914}
   - component: {fileID: 9194363704050999391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2818,7 @@ GameObject:
   - component: {fileID: 7355577978867112645}
   - component: {fileID: 373575345513433552}
   - component: {fileID: 4485966056768283406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Wheel4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2899,7 +2904,7 @@ GameObject:
   - component: {fileID: 7034839755022666237}
   - component: {fileID: 4517309584118845572}
   - component: {fileID: 5532529818650752071}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Panzer_II_F_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2975,3 +2980,107 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &8258931248176655294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1955549666462745628}
+    m_Modifications:
+    - target: {fileID: 100014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Name
+      value: WFX_Explosion Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000008194652
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 9.8068456e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000074505797
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900006, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900008, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900010, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900012, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900016, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+--- !u!198 &8258931248158700656 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 8258931248176655294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8258931248177049904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 8258931248176655294}
+  m_PrefabAsset: {fileID: 0}

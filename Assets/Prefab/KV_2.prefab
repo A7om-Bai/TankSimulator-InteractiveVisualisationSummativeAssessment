@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9098479010234087474}
   - component: {fileID: 2421219360829326854}
   - component: {fileID: 3036921467466826000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Sprocket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5215666091544867728}
   - component: {fileID: 513799749361818183}
   - component: {fileID: 518551916271611480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 6176925933155816236}
   - component: {fileID: 1264828779491718939}
   - component: {fileID: 4803947745335546996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 2565154264644154819}
   - component: {fileID: 62609896540215986}
   - component: {fileID: 1774145004730888401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Idler_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3929062859007597286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Muzzle_MG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 3974561073042524843}
   - component: {fileID: 7619088467106998016}
   - component: {fileID: 5954519828589618427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 2534697357804475229}
   - component: {fileID: 5260715265743990995}
   - component: {fileID: 7851453616960691914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 8918073221068503315}
   - component: {fileID: 3405761248413645754}
   - component: {fileID: 7997342319562403460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 8699434457536013677}
   - component: {fileID: 4149899672361345656}
   - component: {fileID: 2107210325319306294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 3587942342902372668}
   - component: {fileID: 7740922982746315371}
   - component: {fileID: 8508044215497748474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 3968206338984664288}
   - component: {fileID: 1869128485013610033}
   - component: {fileID: 199615282861598808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 23188107732580329}
   - component: {fileID: 4511971457994232192}
   - component: {fileID: 8263565006834522458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Idler_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 4632269759672084189}
   - component: {fileID: 1224411190716114900}
   - component: {fileID: 1239817726794758175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel6_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 4573290561846201386}
   - component: {fileID: 7523238675015211128}
   - component: {fileID: 2979342990909463916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 1101035506236390657}
   - component: {fileID: 5766409013600735247}
   - component: {fileID: 3403671752145899154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 2378791727732844336}
   - component: {fileID: 5089601097974004280}
   - component: {fileID: 3248496645011785791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 5566363897756074548}
   - component: {fileID: 129820255238718707}
   - component: {fileID: 7480208424444434554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1420,7 +1420,7 @@ GameObject:
   - component: {fileID: 4941233862887800650}
   - component: {fileID: 6339966039066381468}
   - component: {fileID: 4149435733697625598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Track_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 5851663715468103637}
   - component: {fileID: 7625646911446439342}
   - component: {fileID: 4091773102487490682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9153344500441590684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1625,7 +1625,8 @@ Transform:
   m_LocalPosition: {x: 0.0000000032596308, y: -0.00000023841858, z: 1.4220636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2878252806737213331}
   m_Father: {fileID: 3968206338984664288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5527245876834406171
@@ -1638,7 +1639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921934626133982258}
   - component: {fileID: 8603759634909736092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheels_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,7 +1697,7 @@ GameObject:
   - component: {fileID: 9146566376125793016}
   - component: {fileID: 4403339589717856893}
   - component: {fileID: 4063947309612124195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Sprocket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1782,7 +1783,7 @@ GameObject:
   - component: {fileID: 2302970702913636274}
   - component: {fileID: 1003593662628062103}
   - component: {fileID: 3212625712412838824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1869,7 @@ GameObject:
   - component: {fileID: 2550137341874011120}
   - component: {fileID: 1850794027658980221}
   - component: {fileID: 2012878557772044123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +1955,7 @@ GameObject:
   - component: {fileID: 7993105966394558102}
   - component: {fileID: 875560916441558820}
   - component: {fileID: 378216065583336892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Roller1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2051,7 +2052,7 @@ GameObject:
   - component: {fileID: 3178368921727162224}
   - component: {fileID: 3186807599115519784}
   - component: {fileID: 6419837338345288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2
   m_TagString: Selectable
   m_Icon: {fileID: 0}
@@ -2406,6 +2407,10 @@ MonoBehaviour:
   turret: {fileID: 4941062989069031329}
   firePoint: {fileID: 9153344500441590684}
   shellPrefab: {fileID: 2989000923634411228, guid: 44cdcd55c8562cc46b31e272eb09fc5b, type: 3}
+  muzzleFlash: {fileID: 2878252806723056339}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &6419837338345288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4963167673151624205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Muzzle_MG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2468,7 @@ GameObject:
   - component: {fileID: 723757754393050043}
   - component: {fileID: 2138319688949523007}
   - component: {fileID: 6633268509140768090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Mantlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2551,7 +2556,7 @@ GameObject:
   - component: {fileID: 1651857026571278693}
   - component: {fileID: 6718536682694928595}
   - component: {fileID: 432767547401771772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2635,7 +2640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2291648324714736154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Exhaust_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2668,7 +2673,7 @@ GameObject:
   - component: {fileID: 878050975712431015}
   - component: {fileID: 6103941451828228014}
   - component: {fileID: 4462169829765029472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheel5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2760774525987690421}
   - component: {fileID: 859899464410438257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Wheels_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2809,7 +2814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4823625245553610276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Exhaust_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2840,7 +2845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518099476930335420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Muzzle_MG3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2879,7 @@ GameObject:
   - component: {fileID: 2105137726901970406}
   - component: {fileID: 8271264567549990723}
   - component: {fileID: 3339454214109341835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2980,7 +2985,7 @@ GameObject:
   - component: {fileID: 8641571696961919308}
   - component: {fileID: 3577446895813313159}
   - component: {fileID: 3367539537440746094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KV_2_Track_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3071,3 +3076,107 @@ MonoBehaviour:
   rotationScrollFactor: 0.02
   movementThreshold: 0.001
   rotationThreshold: 0.01
+--- !u!1001 &2878252806736817437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9153344500441590684}
+    m_Modifications:
+    - target: {fileID: 100014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Name
+      value: WFX_Explosion Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000013661041
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 8.216734e-24
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.220446e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900006, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900008, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900010, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900012, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900016, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+--- !u!198 &2878252806723056339 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 2878252806736817437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2878252806737213331 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 2878252806736817437}
+  m_PrefabAsset: {fileID: 0}

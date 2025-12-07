@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3221820035407430247}
   - component: {fileID: 8118195981660909505}
   - component: {fileID: 2203392042018413709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5606173952268189516}
   - component: {fileID: 8327320198238174983}
   - component: {fileID: 7174861782343015995}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7396559631037935670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,8 @@ Transform:
   m_LocalPosition: {x: 4.656613e-10, y: 0.00000011920929, z: 1.8559542}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5509793636718724934}
   m_Father: {fileID: 2193511086189575004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070623657074005788
@@ -212,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7835528149444694021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Exhaust_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +246,7 @@ GameObject:
   - component: {fileID: 4418977603466247287}
   - component: {fileID: 155018483709793771}
   - component: {fileID: 1448871257607420180}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +333,7 @@ GameObject:
   - component: {fileID: 7512807836862481437}
   - component: {fileID: 4027721664485886586}
   - component: {fileID: 2829175384063526174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8610420859173459357}
   - component: {fileID: 6956194422351642992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheels_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1564308489210017081}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Exhaust_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +521,7 @@ GameObject:
   - component: {fileID: 448395117303928846}
   - component: {fileID: 2414876273186535758}
   - component: {fileID: 7142399507055330189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +607,7 @@ GameObject:
   - component: {fileID: 9000426284275423654}
   - component: {fileID: 6414724776844249474}
   - component: {fileID: 2440840747878383615}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5937995274197210273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Muzzle_MG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +724,7 @@ GameObject:
   - component: {fileID: 8696647265951784465}
   - component: {fileID: 6084903518646029635}
   - component: {fileID: 8505805597956973857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Sprocket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +810,7 @@ GameObject:
   - component: {fileID: 8083216578565294515}
   - component: {fileID: 957958468716436583}
   - component: {fileID: 1947804443524071813}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +896,7 @@ GameObject:
   - component: {fileID: 3039457577560176577}
   - component: {fileID: 21746219847097231}
   - component: {fileID: 3217734783115170359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Sprocket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +982,7 @@ GameObject:
   - component: {fileID: 2193511086189575004}
   - component: {fileID: 5328894293577410236}
   - component: {fileID: 5950749285985331906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1069,7 @@ GameObject:
   - component: {fileID: 768537747300845658}
   - component: {fileID: 3139498876441094559}
   - component: {fileID: 73969729986010278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1155,7 @@ GameObject:
   - component: {fileID: 8657641788023629969}
   - component: {fileID: 2298378361014788482}
   - component: {fileID: 1357274656083549979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1241,7 @@ GameObject:
   - component: {fileID: 5173287317755270249}
   - component: {fileID: 8528221900774677254}
   - component: {fileID: 4917546266990627489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Idler_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1327,7 @@ GameObject:
   - component: {fileID: 2867479797720336602}
   - component: {fileID: 563861056804101021}
   - component: {fileID: 853902140216595454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Mantlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1415,7 +1416,7 @@ GameObject:
   - component: {fileID: 8115900179060787440}
   - component: {fileID: 7170228739225512249}
   - component: {fileID: 9929182518053480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Track_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,7 +1518,7 @@ GameObject:
   - component: {fileID: 8959176946242851991}
   - component: {fileID: 4850106824710675726}
   - component: {fileID: 4654960970685640847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1603,7 +1604,7 @@ GameObject:
   - component: {fileID: 7310061095617306512}
   - component: {fileID: 140471711348472341}
   - component: {fileID: 8835307796532352988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Idler_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1690,7 +1691,7 @@ GameObject:
   - component: {fileID: 941092700688445678}
   - component: {fileID: 3441056349412033383}
   - component: {fileID: 5597159276921138050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Track_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1803,7 +1804,7 @@ GameObject:
   - component: {fileID: 2193822756255259818}
   - component: {fileID: 8229476974602715726}
   - component: {fileID: 5272195858844009956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76
   m_TagString: Selectable
   m_Icon: {fileID: 0}
@@ -2158,6 +2159,10 @@ MonoBehaviour:
   turret: {fileID: 6353955503779590376}
   firePoint: {fileID: 7396559631037935670}
   shellPrefab: {fileID: 2989000923634411228, guid: 44cdcd55c8562cc46b31e272eb09fc5b, type: 3}
+  muzzleFlash: {fileID: 5509793636738122246}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &5272195858844009956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,7 +2188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5336663331987214672}
   - component: {fileID: 6070459378606863480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheels_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2237,7 +2242,7 @@ GameObject:
   - component: {fileID: 2199996711213877377}
   - component: {fileID: 5480359837760503620}
   - component: {fileID: 3395632218514568667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Wheel1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2321,7 +2326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6419174272012309500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_34_76_Muzzle_MG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,3 +2348,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6915712528612896390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5509793636718861768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7396559631037935670}
+    m_Modifications:
+    - target: {fileID: 100014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Name
+      value: WFX_Explosion Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000004718865
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 9.458629e-22
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.8421706e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900006, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900008, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900010, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900012, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900016, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+--- !u!4 &5509793636718724934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 5509793636718861768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5509793636738122246 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
+  m_PrefabInstance: {fileID: 5509793636718861768}
+  m_PrefabAsset: {fileID: 0}
