@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class TankCombatSystem : MonoBehaviour
 {
+    public AudioSource fireAudioSource;
+    public AudioClip fireClip;
+
     public float fireInterval = 2f;
     public float detectionRange = 25f;
     public float rotateSpeed = 3f;
@@ -107,18 +110,24 @@ public class TankCombatSystem : MonoBehaviour
     }
     void Shoot()
     {
-        // 1. 播放炮口火焰特效
+        // 1. 炮口火焰
         if (muzzleFlash != null)
         {
             muzzleFlash.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             muzzleFlash.Play();
         }
 
-        // 2. 发射炮弹
-        GameObject shell = Instantiate(shellPrefab, firePoint.position, firePoint.rotation);
+        // 2. 开火音效
+        if (fireAudioSource && fireClip)
+        {
+            fireAudioSource.PlayOneShot(fireClip);
+        }
 
+        // 3. 发射炮弹
+        GameObject shell = Instantiate(shellPrefab, firePoint.position, firePoint.rotation);
         Shell s = shell.GetComponent<Shell>();
         if (s != null)
             s.ownerFaction = myFaction;
     }
+
 }

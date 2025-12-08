@@ -2153,6 +2153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac70d1116b95c248ba97622fc73408a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireAudioSource: {fileID: 6954296243815068192, guid: d66ef0d2449b8614c9fee7af3d0d09d2, type: 3}
+  fireClip: {fileID: 8300000, guid: d4f30c818dc1f514f924b79c756a0bd4, type: 3}
   fireInterval: 6
   detectionRange: 20
   rotateSpeed: 3

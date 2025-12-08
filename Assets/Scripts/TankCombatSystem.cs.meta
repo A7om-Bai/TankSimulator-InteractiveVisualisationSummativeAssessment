@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: 8ac70d1116b95c248ba97622fc73408a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fireAudioSource: {instanceID: 0}
+  - fireClip: {fileID: 8300000, guid: d4f30c818dc1f514f924b79c756a0bd4, type: 3}
+  - turret: {instanceID: 0}
+  - firePoint: {instanceID: 0}
+  - shellPrefab: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
