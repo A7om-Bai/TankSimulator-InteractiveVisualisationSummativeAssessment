@@ -6,8 +6,8 @@ public class UI_DescriptionPanel : MonoBehaviour
     public static UI_DescriptionPanel Instance;
 
     [Header("UI Elements")]
-    public TextMeshProUGUI descriptionText; // 文本
-    public GameObject panelRoot;            // 整个面板
+    public TextMeshProUGUI descriptionText;
+    public GameObject panelRoot;
 
     void Awake()
     {
@@ -20,7 +20,7 @@ public class UI_DescriptionPanel : MonoBehaviour
         Instance = this;
 
         if (panelRoot != null)
-            panelRoot.SetActive(false);  // 启动时隐藏
+            panelRoot.SetActive(false);
     }
 
     public static void Show(string text)

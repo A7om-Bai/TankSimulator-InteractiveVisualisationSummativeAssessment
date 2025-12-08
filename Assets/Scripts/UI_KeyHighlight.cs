@@ -21,11 +21,9 @@ public class UI_KeyHighlight : MonoBehaviour
 
         baseColor = image.color;
 
-        // ✅ 开局确保完全透明
         SetAlpha(0f);
     }
 
-    // ✅ KeyBar 调用的唯一入口
     public void PlayOnce()
     {
         if (fadeRoutine != null)
@@ -64,7 +62,6 @@ public class UI_KeyHighlight : MonoBehaviour
         image.color = c;
     }
 
-    // ✅ KeyBar Clear / 取消用（如果你有）
     public void ResetHighlight()
     {
         if (fadeRoutine != null)

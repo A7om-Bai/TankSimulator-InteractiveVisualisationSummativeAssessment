@@ -8,10 +8,8 @@ public class TankShowcaseController : MonoBehaviour
     public Material normalExteriorMaterial;
     public Material xrayExteriorMaterial;
 
-
     public GarageUIManager GarageUImanager;
     public UI_KeyBarController keyBar;
-
 
     [Header("Interior Modules")]
     public GameObject engine;
@@ -25,20 +23,15 @@ public class TankShowcaseController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioSourceClip;
 
-    // --- 内构、说明文字 ---
     private Dictionary<int, GameObject> moduleByKey = new Dictionary<int, GameObject>();
     private Dictionary<int, string> descByKey = new Dictionary<int, string>();
 
-    // --- 状态记录（用于检测重复按键） ---
     private int currentMode = 0;
     private bool descriptionVisible = false;
 
-
-    // ==========================================================
-    //                     初始化
-    // ==========================================================
     void Awake()
     {
+        // Initialize the mapping of keys to modules and descriptions
         moduleByKey[3] = engine;
         moduleByKey[4] = crew;
         moduleByKey[5] = gearBox;
@@ -58,18 +51,16 @@ public class TankShowcaseController : MonoBehaviour
 
     void Start()
     {
-        UI_DescriptionPanel.Hide();   // 开场隐藏 UI
-        ShowDefault(false, false);    // 初始化模型：不显示UI、不播放声音
+        // Hide the description panel and initialize the default mode
+        UI_DescriptionPanel.Hide();   // Hide UI at the start
+        ShowDefault(false, false);    // Initialize the model without showing UI or playing sound
         if (GarageUImanager != null)
             GarageUImanager.HideUI();
     }
 
-
-    // ==========================================================
-    //                     Update 监听按键
-    // ==========================================================
     void Update()
     {
+        // Check for key presses to activate different modes
         CheckKey(KeyCode.Alpha1, 1);
         CheckKey(KeyCode.Alpha2, 2);
         CheckKey(KeyCode.Alpha3, 3);
@@ -80,15 +71,16 @@ public class TankShowcaseController : MonoBehaviour
         CheckKey(KeyCode.Alpha8, 8);
     }
 
-
-    // ==========================================================
-    //         核心逻辑：重复按相同按键 → 隐藏说明面板
-    // ==========================================================
+    /// <summary>
+    /// Checks if a specific key is pressed and activates the corresponding mode.
+    /// </summary>
+    /// <param name="key">The key to check.</param>
+    /// <param name="mode">The mode to activate.</param>
     void CheckKey(KeyCode key, int mode)
     {
         if (Input.GetKeyDown(key))
         {
-            // === 重复按：关闭 ===
+            // If the same key is pressed again, hide the description and UI
             if (currentMode == mode && descriptionVisible)
             {
                 UI_DescriptionPanel.Hide();
@@ -97,7 +89,6 @@ public class TankShowcaseController : MonoBehaviour
                 if (GarageUImanager != null)
                     GarageUImanager.HideUI();
 
-                // ✅【第四步：KeyBar 关闭】
                 if (keyBar != null)
                     keyBar.ToggleKey(mode);
 
@@ -105,20 +96,20 @@ public class TankShowcaseController : MonoBehaviour
                 return;
             }
 
-            // === 新模式 ===
+            // Activate the new mode
             ActivateMode(mode);
             currentMode = mode;
             descriptionVisible = true;
 
-            // ✅【第四步：KeyBar 高亮】
             if (keyBar != null)
                 keyBar.ToggleKey(mode);
         }
     }
 
-    // ==========================================================
-    //                 模式触发（1~8）
-    // ==========================================================
+    /// <summary>
+    /// Activates the specified mode (default, X-ray, or module view).
+    /// </summary>
+    /// <param name="mode">The mode to activate.</param>
     void ActivateMode(int mode)
     {
         switch (mode)
@@ -135,20 +126,20 @@ public class TankShowcaseController : MonoBehaviour
         }
     }
 
-
-    // ==========================================================
-    //                     音效播放
-    // ==========================================================    
+    /// <summary>
+    /// Plays a sound effect.
+    /// </summary>
+    /// <param name="clip">The audio clip to play.</param>
     void PlaySound(AudioClip clip)
     {
         if (audioSource != null && clip != null)
             audioSource.PlayOneShot(clip);
     }
 
-
-    // ==========================================================
-    //               外观材质切换工具函数
-    // ==========================================================
+    /// <summary>
+    /// Applies the specified material to all exterior renderers.
+    /// </summary>
+    /// <param name="m">The material to apply.</param>
     void ApplyExteriorMaterial(Material m)
     {
         foreach (var r in exteriorRenderers)
@@ -158,10 +149,9 @@ public class TankShowcaseController : MonoBehaviour
         }
     }
 
-
-    // ==========================================================
-    //                     内构显示控制
-    // ==========================================================
+    /// <summary>
+    /// Hides all interior modules.
+    /// </summary>
     void HideAllModules()
     {
         foreach (var kv in moduleByKey)
@@ -169,10 +159,11 @@ public class TankShowcaseController : MonoBehaviour
                 kv.Value.SetActive(false);
     }
 
-
-    // ==========================================================
-    //                     模式：默认装甲
-    // ==========================================================
+    /// <summary>
+    /// Activates the default mode, hiding all modules and applying the normal material.
+    /// </summary>
+    /// <param name="showUI">Whether to show the UI description.</param>
+    /// <param name="playSound">Whether to play the activation sound.</param>
     public void ShowDefault(bool showUI = true, bool playSound = true)
     {
         ApplyExteriorMaterial(normalExteriorMaterial);
@@ -184,16 +175,13 @@ public class TankShowcaseController : MonoBehaviour
         if (GarageUImanager != null)
             GarageUImanager.ShowUI(1);
 
-
-
         if (playSound)
             PlaySound(audioSourceClip);
     }
 
-
-    // ==========================================================
-    //                     模式：全 X 光
-    // ==========================================================
+    /// <summary>
+    /// Activates the X-ray mode, showing all interior modules.
+    /// </summary>
     public void ShowXRay()
     {
         ApplyExteriorMaterial(xrayExteriorMaterial);
@@ -209,10 +197,10 @@ public class TankShowcaseController : MonoBehaviour
         PlaySound(audioSourceClip);
     }
 
-
-    // ==========================================================
-    //                     模式：单一模块
-    // ==========================================================
+    /// <summary>
+    /// Activates the module view for a specific module.
+    /// </summary>
+    /// <param name="key">The key corresponding to the module.</param>
     public void ShowModule(int key)
     {
         ApplyExteriorMaterial(xrayExteriorMaterial);

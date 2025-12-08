@@ -15,7 +15,6 @@ public class UI_KeyBarController : MonoBehaviour
     {
         int index = key - 1;
 
-        // 再次按同一个 → 清除高亮
         if (currentKey == index)
         {
             ClearAll();
